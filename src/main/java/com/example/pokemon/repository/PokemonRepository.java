@@ -131,7 +131,7 @@ return pokemonListe;
       //execute
       ResultSet resultSet = prepareStatement.executeQuery();
 
-      while (resultSet.next()){
+      while (resultSet.next()) {
         int pokemonId = resultSet.getInt("pokedex_number");
         String name = resultSet.getString("name");
         int speed = resultSet.getInt("speed");
@@ -142,7 +142,7 @@ return pokemonListe;
         int hp = resultSet.getInt("hp");
         String primary_type = resultSet.getString("primary_type");
         String secondary_type = resultSet.getString("secondary_type");
-        pokemon = new Pokemon(pokemonId,name,speed,special_defence,special_attack,defence,attack,hp,primary_type,secondary_type);
+        pokemon = new Pokemon(pokemonId, name, speed, special_defence, special_attack, defence, attack, hp, primary_type, secondary_type);
       }
     }
     catch (SQLException sqlException){
@@ -158,7 +158,7 @@ return pokemonListe;
       return connection;
     } else {
       try {
-        connection = DriverManager.getConnection(Login.getDbUrl(), Login.getUser(), Login.getPw());
+        connection = DriverManager.getConnection(Login.getUrl(), Login.getUsername(), Login.getPassword());
         System.out.println("Forbundet");
       } catch (Exception e) {
         System.out.println("Fejl" + " " + e);

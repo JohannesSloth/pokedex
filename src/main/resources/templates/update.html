@@ -19,7 +19,7 @@
 
 <form method="post">
 
-    <p>id: <span th:text="${pokemon.id}"></span></p>
+    <p>id: <span th:text="${pokemon.id}"></span>, Pokemon name: <span th:text="${pokemon.name}"></span></p>
 
     <label for="name">name: </label>
     <input id="name" name="name" type="text" th:value="${pokemon.name}">
