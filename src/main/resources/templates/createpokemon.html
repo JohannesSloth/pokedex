@@ -3,55 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <title>Create Pokemon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-
+<div class="container">
     <h1>Create pokemon</h1>
 
-<style>
-    form
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-</style>
+    <form action="createpokemon" method="post">
+        <div class="form-group w-25">
+            <div class="form-control">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Pokedex id</label>
+                    <input type="number" class="form-control" id="id" name="id" placeholder="1-155">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="e.g. Charizard">
+                </div>
+                <div class="mb-3">
+                    <label for="speed" class="form-label">Speed</label>
+                    <input type="number" class="form-control" id="speed" name="speed" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="special_defence" class="form-label">Special defence</label>
+                    <input type="number" class="form-control" id="special_defence" name="special_defence"
+                           placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="special_attack" class="form-label">Special attack</label>
+                    <input type="number" class="form-control" id="special_attack" name="special_attack" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="defence" class="form-label">Defence</label>
+                    <input type="number" class="form-control" id="defence" name="defence" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="attack" class="form-label">Attack</label>
+                    <input type="number" class="form-control" id="attack" name="attack" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="hp" class="form-label">Hit points</label>
+                    <input type="number" class="form-control" id="hp" name="hp" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="primary_type" class="form-label">Primary type</label>
+                    <input type="text" class="form-control" id="primary_type" name="primary_type"
+                           placeholder="e.g. Ice">
+                </div>
+                <div class="mb-3">
+                    <label for="secondary_type" class="form-label">Secondary type</label>
+                    <input type="text" class="form-control" id="secondary_type" name="secondary_type"
+                           placeholder="e.g. Water">
+                </div>
+                <button type="submit" class="btn btn-success">Create pokemon</button>
+            </div>
+        </div>
+    </form>
+    <!-- </form>
 
-<form action="/createpokemon" method="post">
+    <form action="/createpokemon" method="post">
 
-    <label for="id">id: </label>
-    <input id="id" name="id" type="number">
+        <label for="id">id: </label>
+        <input id="id" name="id" type="number">
 
-    <label for="name">name: </label>
-    <input id="name" name="name" type="text">
+        <label for="name">name: </label>
+        <input id="name" name="name" type="text">
 
-    <label for="speed">speed: </label>
-    <input id="speed" name="speed" type="number">
+        <label for="speed">speed: </label>
+        <input id="speed" name="speed" type="number">
 
-    <label for="special_defence">special defence: </label>
-    <input id="special_defence" name="special_defence" type="number">
+        <label for="special_defence">special defence: </label>
+        <input id="special_defence" name="special_defence" type="number">
 
-    <label for="special_attack">special attack: </label>
-    <input id="special_attack" name="special_attack" type="number">
+        <label for="special_attack">special attack: </label>
+        <input id="special_attack" name="special_attack" type="number">
 
-    <label for="defence">defence: </label>
-    <input id="defence" name="defence" type="number">
+        <label for="defence">defence: </label>
+        <input id="defence" name="defence" type="number">
 
-    <label for="attack">attack: </label>
-    <input id="attack" name="attack" type="number">
+        <label for="attack">attack: </label>
+        <input id="attack" name="attack" type="number">
 
-    <label for="hp">hp: </label>
-    <input id="hp" name="hp" type="number">
+        <label for="hp">hp: </label>
+        <input id="hp" name="hp" type="number">
 
-    <label for="primary_type">primary type: </label>
-    <input id="primary_type" name="primary_type" type="text">
+        <label for="primary_type">primary type: </label>
+        <input id="primary_type" name="primary_type" type="text">
 
-    <label for="secondary_type">secondary type: </label>
-    <input id="secondary_type" name="secondary_type" type="text">
+        <label for="secondary_type">secondary type: </label>
+        <input id="secondary_type" name="secondary_type" type="text">
 
-    <button style="margin-top: 5px" type="submit">Opret pokemon</button>
-</form>
+        <button style="margin-top: 5px" type="submit">Opret pokemon</button>
+        <button type="submit" class="btn btn-success">Opret pokemon</button>
+    </form> -->
 
-
+</div>
 </body>
 </html>
