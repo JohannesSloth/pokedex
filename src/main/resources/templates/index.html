@@ -52,25 +52,25 @@
             <th>
                 Secondary type
             </th>
-
             <th>
-                Delete
-            </th>
-
-            <th>
-                Update
+                Picture
             </th>
             <th>
-                image
+                Change
             </th>
-
+            <!--
+                        <th>
+                            Update
+                        </th>
+            -->
         </tr>
         </thead>
         <tbody>
         <tr th:each="pokemons : ${pokemon}">
             <td th:text="${pokemons.id}">
             </td>
-            <td th:text="${pokemons.name}">
+            <td>
+                <a th:href="@{'https://pokemondb.net/pokedex/' + ${pokemons.name}}"><p th:text="${pokemons.name}"></p></a>
             </td>
             <td th:text="${pokemons.speed}">
             </td>
@@ -89,16 +89,13 @@
             <td th:text="${pokemons.secondary_type}">
             </td>
             <td>
-                <!-- <a th:href="@{'/delete/' + ${pokemons.id}}"> delete </a> -->
-                <a class="btn btn-danger" th:href="@{'/delete/' + ${pokemons.id}}" role="button">Delete</a>
+                <a th:href="@{'https://pokemon.gameinfo.io/en/pokemon/' + ${pokemons.id} + '-' + ${pokemons.name}}">
+                <img th:src="@{'https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/' + ${pokemons.id} + '.png'}">
+                </a>
             </td>
-            <td>
-                <!-- <a th:href="@{'/update/' + ${pokemons.id}}"> update </a> -->
+            <td class="d-flex flex-column">
                 <a class="btn btn-primary" th:href="@{'/update/' + ${pokemons.id}}" role="button">Update</a>
-            </td>
-            <td>
-                <img th:src="@{'https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/' + ${pokemons.id} + '.png'}"
-                     alt="ttt">
+                <a class="btn btn-danger mt-3" th:href="@{'/delete/' + ${pokemons.id}}" role="button">Delete</a>
             </td>
         </tr>
         </tbody>
